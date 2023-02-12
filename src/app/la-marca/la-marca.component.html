@@ -1,0 +1,82 @@
+<div class="contenedor ">
+    <!--Primera seccion en negro-->
+    <section class="bgD bgP d-flex align-items-start justify-content-center flex-column">
+        <div class="mt-4 titulo1 d-flex justify-content-center">
+            <p>Inicio / Productos</p>
+        </div>
+        <div class="ms-2 titulo2 d-flex align-items-start justify-content-center">
+            <img src="../../assets/imagenes/bgtext.png" alt="">
+        </div>
+        <div class="contenido1 d-flex align-items-center justify-content-center">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+    </section>
+    <!--Segunda seccion en blanco-->
+    <section class="bg-white">
+        <div class="d-flex justify-content-center align-items-center flex-column">
+            <div class="d-flex justify-content-center align-items-center section2Imgs position-relative">
+                <img src="../../assets/imagenes/asset-bg.png" alt="" class="img1 position-absolute">
+                <img src="../../assets/imagenes/asset-person.png" alt="" class="img2 position-absolute">
+                <img src="../../assets/imagenes/text.png" alt="" class="img3 position-absolute">
+            </div>
+            <div class="d-flex justify-content-end align-items-center w-50 cuadros">
+                <img src="../../assets/imagenes/asset.png" alt="" class="mb-3">
+            </div>
+            <div class="d-flex justify-content-start align-items-center w-100 pTextImagenes">
+                <p class="position-relative textImagenes">LOREM IPSUM DOLOR SIT AMET   </p>
+            </div>
+        </div>
+    </section>
+    <!--Tercera seccion-->
+    <section class="bg-dark mt-4 position-relative infoSection">
+        <div class="imgInfo position-absolute" ></div>
+        <div class="gridUltimaSection position-absolute w-100 ">
+            <div class="element1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+            <div class="element2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste.</p>
+            </div>
+            <div class="element3">
+                <img class="imgGrid" src="../../assets/imagenes/asset-2.png" alt="">
+            </div>
+            <div class="element4">
+                <h2>LOREM IPSUM DOLOR SIT AMET &nbsp; |</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+            <div class="element5 mb-4">
+                <h2>SUSCRÍBETE A NUESTRO NEWSLETTER &nbsp; |</h2>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut elementum dolor. </p>
+                <form [formGroup]="formSuscripcion" (submit)="suscribir()">
+                    <input required type="text" placeholder="NOMBRE:" formControlName="nombre" [ngClass]="{'invalido':this.formSuscripcion.controls['nombre'].invalid && this.formSuscripcion.controls['nombre'].touched}">
+                    <input required type="text" placeholder="CORREO ELECTRÓNICO:" formControlName="correo" [ngClass]="{'invalido':this.formSuscripcion.controls['correo'].invalid && this.formSuscripcion.controls['correo'].touched}">
+                    <select required formControlName="tipoDocumento" [ngClass]="{'invalido':this.formSuscripcion.controls['tipoDocumento'].invalid && this.formSuscripcion.controls['tipoDocumento'].touched}">
+                        <option disabled hidden selected value="">TIPO DE DOCUMENTO:</option>
+                        <option value="TARJETA IDENTIDAD">TARJETA IDENTIDAD</option>
+                        <option value="CÉDULA DE CIUDADANÍA">CÉDULA DE CIUDADANÍA</option>
+                        <option value="CÉDULA DE EXTRANJERÍA">CÉDULA DE EXTRANJERÍA</option>
+                        <option value="PASAPORTE">PASAPORTE</option>
+                    </select>
+                    <input required type="text" placeholder="NÚMERO DE DOCUMENTO:" formControlName="numeroDocumento" [ngClass]="{'invalido':this.formSuscripcion.controls['numeroDocumento'].invalid && this.formSuscripcion.controls['numeroDocumento'].touched}">
+                    <input required type="text" placeholder="TELÉFONO:" formControlName="telefono" [ngClass]="{'invalido':this.formSuscripcion.controls['telefono'].invalid && this.formSuscripcion.controls['telefono'].touched}">
+                    <div class="d-flex justify-content-around align-items-center terminosYCondiciones">
+                        <div class="d-flex justify-content-center align-items-center flex-row"><input required type="checkbox" formControlName="aceptaTyC" [ngClass]="{'invalido':this.formSuscripcion.controls['aceptaTyC'].invalid && this.formSuscripcion.controls['aceptaTyC'].touched}"><label for=""><u>Acepto términos y condiciones</u></label></div> &nbsp; <button [disabled]="this.formSuscripcion.invalid">SUSCRIBIRME</button>
+                    </div>
+                </form>
+                
+            </div>
+            <div class="element6 mt-4 mb-3">
+                <div class="derechos">
+                    <p>Todos los derechos reservados © 2017</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="position-fixed d-flex align-items-center justify-content-center popUpValido" *ngIf="popUpValid==true">
+        <i class="bi bi-check-circle-fill"></i><p> &nbsp; ¡REGISTRO EXITOSO!</p>
+    </div>
+    <div class="position-fixed d-flex align-items-center justify-content-center popUpInvalido" *ngIf="this.formSuscripcion.invalid && popUpInvalid==true">
+        <i class="bi bi-x-circle-fill"></i><p> &nbsp; REGISTRO INVALIDO</p>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<nav class="navegador position-fixed d-flex align-items-center flex-row justify-content-center">
+    <div class="displayF nav justify-content-between">
+        <div class="displayF navDer fRow">
+            <div class="titulo d-flex align-items-center ustify-content-center">
+                <img class="navbar-brand d-flex align-items-center ustify-content-center user-select-none" [routerLink]="['/La Marca']" src="../../assets/imagenes/logo.png">
+            </div>
+            <div class="botonMenu">
+                <button class="btnNav" type="button" id="btn-menu" (click)="menu()">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+        <div class="displayF navIzq" id="contenidoNav">
+            <div class="displayF navIzqCont" >
+                <ul class="displayF navIzqCont">
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link h-100 d-flex align-items-center" [routerLink]="['/La Marca']">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link h-100 d-flex align-items-center" [routerLink]="['/La Marca']">LA MARCA</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link h-100 d-flex align-items-center" [routerLink]="['/La Marca']">¿DÓNDE COMPRAR?</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link h-100 d-flex align-items-center" [routerLink]="['/La Marca']">CONTÁCTANOS</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link h-100 d-flex align-items-center" href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link h-100 d-flex align-items-center" [routerLink]="['/La Marca']"><i class="bi bi-instagram"></i></a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link h-100 d-flex align-items-center" [routerLink]="['/La Marca']"><i class="bi bi-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

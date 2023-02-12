@@ -1,0 +1,166 @@
+.navegador{
+    background-color: black;
+    height: 75px !important;
+    /* padding: 0px 400px ; */
+    padding-left: 20vw;
+    padding-right: 20vw;
+    font-family: 'Roboto';
+	font-weight:500 !important;
+    z-index: 10000;
+    top:0;
+    width: 100%;
+}
+.nav{
+    flex-flow: row;
+    height: 100%;
+    width: 100%;
+}
+.navDer{
+    justify-content: space-between !important;
+    border-bottom: 4px solid #fccb8d;
+    height: 100%;
+}
+.navIzq{
+    height: 56px;
+}
+.navIzq,.navIzqCont{
+    flex-flow: row;
+    width: auto;
+    height: 100%;
+}
+.botonMenu{
+    display: none;
+}
+.dropdown-menu{
+    background-color: black;
+    color: white;
+}
+.titulo{
+    cursor: pointer;
+    
+}
+.titulo img{
+    width: 200px;
+    margin: 0px 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+p{
+    margin-bottom: 0px;
+    color: white;
+}
+a:link {text-decoration: none }
+a:visited{
+    color: white;  
+    text-decoration: none; 
+}
+a{
+    width: auto;
+    padding: 0px 15px !important;
+}
+.nav-item{
+    width: auto;
+    height: 100%;
+}
+.nav-item:hover, a:hover, li:hover,.bi:hover{
+    color: #fccb8d;
+}
+li:hover{
+    border-bottom: 2px solid #fccb8d;
+}
+@media(max-width:1610px){
+    .navegador{
+        padding: 0px 200px ;
+    }
+
+}
+@media(max-width:1376px){
+    .navegador{
+        padding: 0px 100px ;
+    }
+    .nav-link{
+        font-size: 12px;
+    }
+
+}
+@media(max-width:1045px){
+    .navegador{
+        padding: 0px;
+        height: auto !important;
+    }
+    .nav{
+        flex-flow: column;
+        height: auto;
+    }
+    .navDer{
+        width: 100%;
+        padding: 0px 10px ;
+    }
+    .navIzq{
+        background-color: black;
+        width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+        display: none;
+
+    }
+    .navIzqCont{
+        flex-flow: column !important;
+        padding: 0px !important;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+	.botonMenu{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .bi-list{
+        color: white !important;
+        font-size: 40px;
+    }
+    .bi-list:hover{
+        background-color: transparent;
+        color: white;
+    }
+    .nav-item{
+        height: 40px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .nav-link{
+        width: 100%;
+    }
+    .btnNav{
+        padding: 0.15rem 0.65rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+    }
+    .btnNav:hover{
+        border: 1px solid white;
+    }
+    .titulo,.botonMenu{
+        width: 50%;
+    }
+    .search{
+        width: 100%;
+    }
+    .search input{
+        width: 50%;
+    }
+    .mostrar{
+        display: flex !important;
+    }
+}
